@@ -50,8 +50,7 @@ public class ContainsMap<V>  extends HashMap<String, V> {
         List<V> list = new ArrayList<>();
         for (Entry<String, V> entry : super.entrySet()) {
             if (entry.getKey().contains(k)) {
-                V v = entry.getValue();
-                list.add(super.remove(v));
+                list.add(super.remove(entry.getValue()));
             }
         }
         return list;
